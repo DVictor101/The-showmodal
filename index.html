@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="THE MODAL PAGE" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Bungee+Spice&family=Oswald:wght@500&family=Poppins:ital,wght@1,300&family=Qwitcher+Grypen&family=Roboto:ital,wght@0,300;1,400&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>A Modal Window Showing Various Pages-The Dice Game Page-The Guess My Number Page and The Quote Generator Page</title>
+  </head>
+  <body>
+  <!--THE FIRST PAGE CONTAINING THE MODAL WINDOW-->
+    <main class="main">
+      <!--
+
+THE BUTTON CONTENT
+   -->
+   <div class="buttonmaindiv">
+      <button  class="buttonOne"> DICE MODAL</button>
+      <button class="buttontwo">GUESS MODAL</button>
+
+      <button class="buttonthree">QUOTE MODAL </button></div>
+    </main>
+    <!--QUOTE GENERATOR CONTENT STARTS HERE************************************************************************************************************************************************************-->
+    <section class="quoteSectinContent hidden">
+      <div class="backdiv">
+        <button class="backbuttonOne">MODALS</button>
+       
+      </div>
+      <section class="showmodal">
+        <div class="quotecontainer">
+          <div class="quotetextcontainer">
+            <span class="quotetext">
+              ”Click On Newquote to Generate Quote“</span
+            >
+            <span class="title"></span>
+          </div>
+          <div class="buttondiv">
+            <button class="buttonOned">
+              <svg
+                fill="#000000"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="50px"
+                height="50px"
+              >
+                <path
+                  d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"
+                />
+              </svg>
+            </button>
+            <button class="buttontwod">New Quote</button>
+          </div>
+        </div>
+        <div class="loader hidden" id="loader"></div>
+      </section>
+    </section>
+    <!--LOADER-->
+    <!--THE GUESS A NUMBER CONTENT STARTS HERE************************************************************************************************************************************-->
+    
+    <section class="guessection hidden" >
+      <div class="backdiv">
+        <button class="guessBackButton" id="guessid">MODAL</button>
+        <button class="backbuttontwo" id="guessmodal">NEXT</button>
+      </div>
+      <header class="guesshead">
+        <button class="guesshead__btn" id="again__btn">Again!</button>
+        <span class="guesshead__span">(Between 1 and 20)</span>
+      </header>
+      <h1 class="guesshOne">Guess My Number</h1>
+      <div class="rendom_div">
+        <hr class="randon_hr" />
+        <div class="random-div__box">?</div>
+        </div>
+        <article class="inputcontainer__article">
+          <section class="inputsectionH">
+           <div class="inputdirectdiv"><input class="numinput" type="number" /></div>
+           <button class="numberinput__btn">Check!</button>
+          </section>
+          <section class="correctnum__section">
+<p class="correct__pone">🔥 Correct number</p>
+<p class="correct__ptwo">💯 score: <span class="scorevalue">20</span><p>
+<p class="correct__pthree">🎼 Highscore: <span class="highscorevalue">0</span></p>
+
+
+
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <!--THE PIG DICE GAME STARTS HERE*********************************************************************************************************************************************************************************************************-->
+    <!--{m-c ===middle__content}{m-0===mainplayer__one}{m-t===mainplayer__two}-->
+    <section class="dicesection">
+      <div class="backdiv backdivdice">
+        <button class="diceBackButton">BACK</button>
+        <button class="backbuttontwo diceNextButton">NEXT GAME</button>
+      </div>
+    <section class="dicegame__sec">
+    <div class="dicegame-sec__div">
+<article class="middle__content">
+<button class="m-c__btn">🔄 NEW GAME</button>
+<div class="m-c__div" ><img class="m-c__img" src="./Assets/dice-1.png" alt="dice"></div>
+<button class="m-c__roll">🎲 ROLL DICE</button>
+<button class="m-c__hold">🧘‍♀️ HOLD</button>
+</article>
+<div class="mainplayer__one--0 player--0 player--active">
+<div class="tobeenterdiv">
+<h1 class="m-o__h1">PLAYER 1</h1>
+<span class="m-o__span" id="score--0">0</span>
+</div>
+<section  class="current__section">
+  <h4 class="m-o__h4">CURRENT</h4>
+<span class="m-o__spantwo--0">0</span>
+</section>
+
+</div>
+<!--player two-->
+<div class="mainplayer__one--1 player--1">
+  <div class="tobeenterdivtwo">
+  <h1 class="m-t__h1">PLAYER 2</h1>
+  <span class="m-t__span" id="score--1">0</span>
+</div>
+  <section class="current__section">
+    <h4 class="m-t__h4">CURRENT</h4>
+  <span class="m-o__spantwo--1">0</span>
+  </section>
+  
+  </div>
+
+    </div> 
+    </section>
+    </section>
+   
+    <script src="script.js"></script>
+   
+  </body>
+</html>

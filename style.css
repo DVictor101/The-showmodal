@@ -1,0 +1,861 @@
+/*
+html5doctor.comResetStylesheet
+v1.6.1
+LastUpdated:2010-09-17
+Author:RichardClark-http://richclarkdesign.com
+Twitter:@rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+navul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/*changecolourstosuityourneeds*/
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/*changecolourstosuityourneeds*/
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1pxdotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*changebordercolourtosuityourneeds*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/*
+font-family: "Alkalami", serif;
+font-family: "Bungee Spice", cursive;
+font-family: "Oswald", sans-serif;
+font-family: "Poppins", sans-serif;
+font-family: "Qwitcher Grypen", cursive;
+font-family: "Roboto", sans-serif;*/
+/*body {
+  background-color: rgb(161, 176, 189);
+}*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  background-color: rgb(184, 109, 11);
+}
+
+.buttonmaindiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.buttonOne, .diceBackButton, .guessBackButton, .backbuttonOne, .numberinput__btn, .guesshead__btn, .backbuttontwo, .buttonthree, .buttontwo {
+  width: 30%;
+  height: 2.5rem;
+  border-radius: 10px;
+  margin: 1rem;
+  border: none;
+  background-color: rgb(7, 63, 63);
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.guessBackButton {
+  background-color: rgb(60, 5, 89);
+}
+
+.diceBackButton {
+  background-color: rgb(60, 5, 89);
+}
+
+.showmodal {
+  background-color: rgb(168, 146, 146);
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20L0 20z' fill='%238048d9' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  height: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showmodal span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.quotecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 3px 3px 3px 3px;
+}
+
+.title {
+  margin-top: 10px;
+  font-family: "Qwitcher Grypen", cursive;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.buttondiv {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buttonOned {
+  height: 3.5rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(238, 127, 255);
+  cursor: pointer;
+}
+
+.buttontwod, .backbuttonOne, .numberinput__btn, .guesshead__btn, .backbuttontwo {
+  background-color: rgb(238, 127, 255);
+  font-size: 1.1rem;
+  font-weight: 900;
+  height: 50px;
+  width: 8rem;
+  margin: 10px;
+  align-self: flex-start;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.backdiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.backbuttonOne, .numberinput__btn, .guesshead__btn, .backbuttontwo {
+  background-color: rgb(60, 5, 89);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.backbuttonOne:hover, .numberinput__btn:hover, .guesshead__btn:hover, .backbuttontwo:hover {
+  background-color: white;
+  color: rgb(60, 5, 89);
+}
+
+.backbuttontwo {
+  width: 10rem;
+}
+
+.long-quote {
+  font-size: 2.5rem;
+}
+
+.loader {
+  border: 16px solid rgb(212, 202, 202);
+  border-top: 16px solid rgb(60, 5, 89);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none;
+}
+
+/*8888GUESS MY NUMBER STYLING STARTS HERE*/
+.guessection {
+  background-color: #9ca0c2;
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%234c55a8' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  width: 100%;
+  height: 100%;
+}
+
+.guesshead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guesshead__btn {
+  background-color: white;
+  color: rgb(60, 5, 89);
+}
+
+.guesshead__span {
+  color: white;
+  font-size: 1.1rem;
+  align-self: center;
+}
+
+.guesshOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.rendom_div {
+  height: 10rem;
+  z-index: 2;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.randon_hr {
+  background-color: black;
+  height: 0.3rem;
+  width: 100%;
+  margin-top: 5rem;
+  z-index: 10;
+  margin: auto 0;
+  color: black;
+  position: absolute;
+}
+
+.random-div__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  z-index: 15;
+  font-weight: 900;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.inputcontainer__article {
+  height: 20rem;
+}
+
+.inputcontainer__article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputsectionH {
+  align-self: center;
+  margin: 1rem;
+}
+
+.correctnum__section {
+  align-self: center;
+  margin: 1rem;
+}
+
+.inputdirectdiv {
+  width: 6rem;
+  height: 6rem;
+}
+
+.numinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  text-align: center;
+  height: 6rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.numberinput__btn {
+  margin: 1rem;
+  width: 8rem;
+  height: 3.5rem;
+  font-weight: 900;
+  border-radius: 0;
+}
+.numberinput__btn:hover {
+  background-color: white;
+  color: rgb(60, 5, 89);
+}
+
+.correctnum__section {
+  height: 100%;
+}
+
+.correct__pone, .correct__pthree, .correct__ptwo {
+  font-size: 1.1rem;
+  margin: 3rem 0;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.correct__ptwo {
+  font-size: 1.5rem;
+}
+
+.correct__pthree {
+  font-size: 1.2rem;
+}
+
+/*THE DICE GAME STYLING STARTS HERE **********************************************************************************************************************************************************************/
+.dicegame__sec {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgb(0, 124, 128), rgb(0, 213, 255));
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dicegame-sec__div {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.middle__content {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-c__btn, .m-c__hold, .m-c__roll, .m-c__img {
+  border: none;
+  font-weight: 700;
+  border-radius: 15px;
+  margin: 25px 0;
+  height: 2.5rem;
+}
+
+.m-c__div {
+  width: 50px;
+  height: 50px;
+  margin: 1.5rem;
+}
+
+.m-c__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+}
+
+.m-c__hold {
+  width: 100px;
+}
+
+.mainplayer__one--0, .mainplayer__one--1 {
+  background-color: rgba(156, 160, 194, 0.5);
+  width: 50%;
+  height: 100%;
+  left: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tobeenterdiv {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 27%;
+}
+
+.m-o__h1, .m-o__span, .m-t__span, .m-t__h1 {
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: 900;
+}
+
+.mainplayer__one--1 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.current__section {
+  background-color: blueviolet;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  border-radius: 10px;
+}
+
+.tobeenterdivtwo {
+  width: 100%;
+  height: 50%;
+  padding: 3.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-t__h1 {
+  text-align: center;
+}
+
+.m-o__span, .m-t__span {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.m-t__span {
+  text-align: center;
+}
+
+.m-o__h4 {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.m-t__spantwo--1 {
+  padding: 1rem;
+}
+
+.player--active {
+  background-color: rgb(156, 160, 194);
+}
+
+.player--winner {
+  background-color: #2b3589;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    /*THE DICE GAME STYLING STARTS HERE **********************************************************************************************************************************************************************/
+    /*THE GUESS MY NUMBER STYLING*************************************************/
+  }
+  main .m-c__hold {
+    width: 40px;
+  }
+  main .quotetextcontainer {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .title {
+    color: rgb(60, 5, 89);
+  }
+  main .quotetext {
+    font-weight: bold;
+  }
+  main .buttondiv {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  main .buttonOned {
+    height: 5rem;
+    width: 5rem;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  main .buttontwod, main .backbuttonOne, main .backbuttontwo, main .guesshead__btn, main .numberinput__btn {
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 13rem;
+    border-radius: 10px;
+  }
+  main .backbuttontwo {
+    width: 15rem;
+  }
+  main .loader {
+    border: 16px solid rgb(212, 202, 202);
+    border-top: 16px solid rgb(60, 5, 89);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+  }
+  main .guesshead {
+    margin-top: 1%;
+    margin: 3rem;
+  }
+  main .guesshead__span {
+    font-size: 1.5rem;
+  }
+  main .guesshOne {
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+  }
+  main .rendom_div {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  main .random-div__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 6rem;
+    font-size: 3rem;
+  }
+  main .inputcontainer__article {
+    margin: 2rem;
+  }
+  main .correctnum__section {
+    align-self: center;
+    margin: 1rem;
+  }
+  main .inputdirectdiv {
+    width: 6rem;
+    height: 6rem;
+  }
+  main .numinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 8rem;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  main .numberinput__btn {
+    margin: 3rem;
+    width: 8rem;
+    height: 3.5rem;
+  }
+  main .correctnum__section {
+    margin: 3rem;
+  }
+  main .correct__pone, main .correct__ptwo, main .correct__pthree {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  main {
+    height: 10rem;
+  }
+  .buttonOne, .buttontwo, .buttonthree, .backbuttonOne, .guessBackButton, .diceBackButton, .backbuttontwo, .guesshead__btn, .numberinput__btn {
+    height: 4rem;
+    border-radius: 15px;
+    font-size: 1.8rem;
+  }
+  .quotetextcontainer {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    color: rgb(60, 5, 89);
+  }
+  .quotetext {
+    font-weight: bold;
+  }
+  .buttondiv {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .buttonOned {
+    height: 5rem;
+    width: 5rem;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .buttontwod, .backbuttonOne, .backbuttontwo, .guesshead__btn, .numberinput__btn {
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 13rem;
+    border-radius: 10px;
+  }
+  .backbuttontwo {
+    width: 15rem;
+  }
+  .loader {
+    border: 16px solid rgb(212, 202, 202);
+    border-top: 16px solid rgb(60, 5, 89);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+  }
+  /*THE GUESS MY NUMBER STYLING*************************************************/
+  .guesshead {
+    margin: 3rem;
+  }
+  .guesshead__span {
+    font-size: 2rem;
+  }
+  .guesshOne {
+    margin-top: 1.5rem;
+    font-size: 5rem;
+  }
+  .random-div__box {
+    width: 8rem;
+    height: 6rem;
+    font-size: 3rem;
+  }
+  .inputcontainer__article {
+    margin: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  /*THE GUESS MY NUMBER STYLING*************************************************/
+  .guesshead {
+    margin-top: 0.5%;
+    margin: 3rem;
+  }
+  .guesshead__span {
+    font-size: 1.5rem;
+  }
+  .guesshOne {
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+  }
+  .rendom_div {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .random-div__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 6rem;
+    font-size: 3rem;
+  }
+  .inputcontainer__article {
+    margin: 2rem;
+  }
+  .correctnum__section {
+    align-self: center;
+    margin: 1rem;
+  }
+  .inputdirectdiv {
+    width: 6rem;
+    height: 6rem;
+  }
+  .numinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 8rem;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  .numberinput__btn {
+    margin: 3rem;
+    width: 8rem;
+    height: 3.5rem;
+  }
+  .correctnum__section {
+    margin: 3rem;
+  }
+  .correct__pone, .correct__ptwo, .correct__pthree {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
